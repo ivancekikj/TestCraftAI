@@ -60,7 +60,7 @@ public class UsersController {
         String result = userService.login(email, password);
 
         if ("OK".equals(result)) {
-            return "redirect:/home";
+            return "redirect:/";
         } else {
             model.addAttribute("error", result);
             return "login";
