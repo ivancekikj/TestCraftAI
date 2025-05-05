@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCraft AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .ai-logo {
+            font-weight: bold;
+            color: #65d794;
+            font-size: 4rem;
+        }
+        .btn-primary-custom {
+            background-color: #1e4b6d;
+            color: white;
+        }
+        .btn-teal {
+            background-color: #53cfc4;
+            color: white;
+        }
+        .btn-lightgreen {
+            background-color: #71e3a1;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <span style="color:#1e4b6d">Test</span><span class="ai-logo">AI</span>
+        </a>
+        <div class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/generate}">Generate</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/flashcards}">Flashcards</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/library}">Your library</a></li>
+            </ul>
+        </div>
+        <div class="d-flex">
+            <a class="nav-link" th:href="@{/signup}">Sign up</a>
+            <a class="btn btn-primary btn-sm ms-2" th:href="@{/login}">Log in</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero container">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <h1>
+                <span style="color:#333">Test</span>
+                <span class="ai-logo">A</span>
+                <span style="color:#333">I</span><br>
+                <span style="color:#333">Craft</span>
+            </h1>
+            <h4 class="mt-3 fw-bold">Welcome to TestCraft AI -<br>An AI-Powered Educational Platform</h4>
+            <p class="text-muted">Revolutionizing the way educators create, share, and evaluate knowledge.</p>
+            <p>Our platform leverages AI to automatically generate quizzes and tests from educational materials, saving time for professors and enhancing learning for students.</p>
+            <p>With seamless integration into Google Classroom, students have instant access to customized tests, while professors gain powerful insights into student performance.</p>
+            <a class="btn btn-primary-custom btn mt-2" th:href="@{/get-started}">Get started</a>
+        </div>
+        <div class="col-md-6">
+            <div class="d-grid gap-3">
+                <button class="btn btn-primary-custom p-3">
+                    Simply import your PDFs and watch as AI generates multiple types of questions based on your materials
+                </button>
+                <button class="btn btn-teal p-3">
+                    Choose the number of questions and types you want to generate—tailored to your specific needs.
+                </button>
+                <button class="btn btn-lightgreen p-3">
+                    Choose the number of questions and types you want to generate—tailored to your specific needs.
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
